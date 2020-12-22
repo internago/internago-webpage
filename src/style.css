@@ -1,4 +1,121 @@
-/* CSS Custom Properties Definitions */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light-internago-blue: #0066AA;
+  --dark-internago-blue: #00446E;
+  --dark-blue: #7CB2F2;
+  --light-blue: #C5E0FC;
+  --dark-grey: #4E4E4E;
+  --white: #ffffff;
+  --main-font: 'Source Sans Pro', sans-serif;
+  --big-gap: 9%;
+  --medium-gap: 5rem;
+  --small-gap: 2.1rem;
+  --fontSize-0: 0.833rem;
+  --fontSize-1: 1rem;
+  --fontSize-2: 1.2rem;
+  --fontSize-3: 1.44rem;
+  --fontSize-4: 1.728rem;
+  --fontSize-5: 2.074rem;
+  --fontSize-6: 2.488rem;
+  --fontSize-7: 2.986rem;
+}
+
+body  {
+  font-family: var(--main-font);
+}
+
+h1 {
+  font-size: var(--fontSize-6);
+}
+
+h2 {
+  font-size: var(--fontSize-5);
+}
+
+h3 {
+  font-size: var(--fontSize-4);
+}
+
+h4 {
+  font-size: var(--fontSize-3);
+}
+
+h5 {
+  font-size: var(--fontSize-2);
+}
+
+h6 {
+  font-size: var(--fontSize-1);
+}
+
+p {
+  font-size: var(--fontSize-0);
+}
+
+.cta-btn {
+  background-color: var(--dark-internago-blue);
+  color: var(--white);
+  border: 2px solid var(--dark-internago-blue);
+  border-radius: 50px;
+  padding: 0.65rem 1.4rem;
+  transition: background-color 0.4s ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--white);
+  color: var(--dark-internago-blue);
+}
+
+
+/*-----------------LAYOUT-----------------*/
+
+nav {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--small-gap) var(--big-gap);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+nav li {
+  display: inline-block;
+  margin-left: var(--small-gap);
+}
+
+nav li a {
+  color: var(--dark-internago-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-btn {
+  border: 2px solid var(--dark-internago-blue);
+  border-radius: 50px;
+  padding: 0.65rem 1.4rem;
+  transition: background-color 0.4s ease;
+}
+
+.contact-btn:hover {
+  background-color: var(--dark-internago-blue);
+  color: var(--white);
+}
+
+.internago-img{
+  width: 15%;
+}
+
+
+/* CSS Custom Properties Definitions 
 
 :root {
   --maxWidth-none: "none";
@@ -45,7 +162,7 @@
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
   --lineHeight-relaxed: 1.625;
-  /* 1.200 Minor Third Type Scale */
+
   --fontSize-0: 0.833rem;
   --fontSize-1: 1rem;
   --fontSize-2: 1.2rem;
@@ -62,7 +179,7 @@
   --color-accent: #d1dce5;
 }
 
-/* HTML elements */
+
 
 *,
 :after,
@@ -93,7 +210,7 @@ hr {
   border: 0;
 }
 
-/* Heading */
+
 
 h1,
 h2,
@@ -157,7 +274,6 @@ h6 > a {
   color: inherit;
 }
 
-/* Prose */
 
 p {
   line-height: var(--lineHeight-relaxed);
@@ -227,7 +343,7 @@ table thead tr th {
   border-bottom: 1px solid var(--color-accent);
 }
 
-/* Link */
+
 
 a {
   color: var(--color-primary);
@@ -238,7 +354,7 @@ a:focus {
   text-decoration: none;
 }
 
-/* Custom classes */
+
 
 .global-wrapper {
   margin: var(--spacing-0) auto;
@@ -319,7 +435,7 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
-/* Media queries */
+
 
 @media (max-width: 42rem) {
   blockquote {
@@ -331,3 +447,4 @@ a:focus {
     list-style-position: inside;
   }
 }
+*/
