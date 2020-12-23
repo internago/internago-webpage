@@ -1,19 +1,21 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CTA from "../components/cta"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+  const heading = "Want to know more?"
+  const text = ""
+  const btn = "Contact us today"
 
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
+        <SEO title="Blog &amp; News" />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -25,40 +27,38 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+      <SEO title="Blog &amp; News" />
+      <section className="overview-section">
 
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
+          {posts.map(post => {
+            const title = post.frontmatter.title || post.fields.slug
+            const image = post.frontmatter.featuredimage 
+
+
+            return (
+              <div className="blog-card" key={post.fields.slug}>
+                <div>
+                  <img src={image} alt= "featured image thumbnail for post" itemProp="image"></img>
+                  <h3 itemProp="headline">{title}</h3>
+                  <small >{post.frontmatter.date}</small>
+        
+                    
                   <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
+                      dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.description || post.excerpt,
+                      }}
+                      itemProp="description"
                   />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+                </div> 
+
+                <Link className="read-more" to={post.fields.slug} itemProp="url">Read more</Link>
+   
+              </div>
+            )
+          })}
+      </section>
+
+      <CTA heading={heading} text={text} btn={btn}/>
     </Layout>
   )
 }
@@ -82,6 +82,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          featuredimage
         }
       }
     }

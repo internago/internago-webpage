@@ -16,7 +16,7 @@
   --dark-grey: #4E4E4E;
   --white: #ffffff;
   --main-font: 'Source Sans Pro', sans-serif;
-  --big-gap: 9%;
+  --big-gap: 11%;
   --medium-gap: 5rem;
   --small-gap: 2.1rem;
   --fontSize-0: 0.7rem;
@@ -31,35 +31,49 @@
 
 body  {
   font-family: var(--main-font);
+  width: 100vw;
 }
+
+
 
 h1 {
   font-size: var(--fontSize-6);
+  color: var(--dark-internago-blue);
+  font-weight: 600px;
+
 }
 
 h2 {
   font-size: var(--fontSize-5);
+  color: var(--dark-internago-blue);
+
 }
 
 h3 {
   font-size: var(--fontSize-4);
+  color: var(--dark-internago-blue);
 }
 
 h4 {
   font-size: var(--fontSize-3);
+  color: var(--dark-internago-blue);
+  
 }
 
 h5 {
   font-size: var(--fontSize-2);
+  color: var(--dark-internago-blue);
 }
 
 h6 {
   font-size: var(--fontSize-1);
+  color: var(--dark-internago-blue);
 }
 
 p {
   font-size: var(--fontSize-1);
-  line-height: 1.5;
+  line-height: 1.7;
+  letter-spacing: 0.004em;
 }
 
 .cta-btn {
@@ -69,11 +83,17 @@ p {
   border-radius: 50px;
   padding: 0.65rem 1.4rem;
   transition: background-color 0.4s ease;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .cta-btn:hover {
   background-color: var(--white);
   color: var(--dark-internago-blue);
+}
+
+img {
+  width: 100%
 }
 
 
@@ -86,6 +106,12 @@ nav {
   align-items: center;
   padding: var(--small-gap) var(--big-gap);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  height: 10%;
+  overflow: hidden;
 }
 
 nav li {
@@ -97,6 +123,12 @@ nav li a {
   color: var(--dark-internago-blue);
   text-decoration: none;
   font-weight: 600;
+}
+.toggle-icon {
+  position: relative;
+  top: 7px;
+  width: 15px;
+  left: 5px;
 }
 
 .contact-btn {
@@ -130,8 +162,19 @@ footer {
   justify-content: space-between;
 }
 
-.footer-left svg {
-width: 2rem;
+.footer-icons  {
+  display: inline-block;
+  margin-bottom: 1.4rem;
+  
+}
+
+.footer-icons a {
+  margin-right: 1.4rem;
+
+}
+
+.footer-icons svg {
+  width: 1.6rem;
 }
 
 .copyright-text {
@@ -148,6 +191,104 @@ width: 2rem;
 .footer-right p:last-child {
   margin-bottom:0;
 }
+
+
+/*-----------------CTA-----------------*/
+.cta-section {
+  height: 29rem;
+  background-image: url("images/graphics/wave.png");
+  text-align: center;
+  padding-top: var(--big-gap);
+}
+
+.cta-section p {
+  width: 34rem;
+  margin: var(--small-gap) auto;
+}
+
+.cta-section .cta-btn {
+  display: inline-block;
+}
+
+
+/*-----------------HOME-----------------*/
+.hero {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 12rem 1.4rem; */
+  padding: calc(var(--big-gap) * 1.2) var(--medium-gap) var(--big-gap) var(--big-gap);
+
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column; 
+  width: 43%;
+  margin-top: var(--medium-gap);
+
+}
+
+.hero-left p {
+  font-size: calc(var(--fontSize-2) * 0.9);
+  color: var(--dark-grey);
+  line-height: 1.8rem;
+ 
+}
+ a .demo-btn {
+ margin-top: var(--small-gap);
+}
+
+.hero-graphic {
+    display: flex;
+    margin-left: var(--medium-gap);
+}
+
+
+
+
+/*-----------------BLOG-----------------*/
+.overview-section {
+  padding: var(--big-gap);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: 22rem;
+  grid-gap: 6vw;
+}
+
+.blog-card {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 21px;
+  padding: var(--small-gap);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-card h3 {
+  font-weight: 400;
+  font-size: var(--fontSize-3);
+  margin-bottom: 0.6rem;
+}
+
+.blog-card p {
+  margin-top: 0.6rem;
+}
+
+.blog-card img {
+  height: 6.25rem;
+  width: 100%;
+}
+
+.blog-card .read-more {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+.blog-card .read-more:hover {
+  color: var(--black);
+}
+
+
 
 
 /* CSS Custom Properties Definitions 
