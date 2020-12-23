@@ -19,8 +19,8 @@
   --big-gap: 9%;
   --medium-gap: 5rem;
   --small-gap: 2.1rem;
-  --fontSize-0: 0.833rem;
-  --fontSize-1: 1rem;
+  --fontSize-0: 0.7rem;
+  --fontSize-1: 0.833rem;
   --fontSize-2: 1.2rem;
   --fontSize-3: 1.44rem;
   --fontSize-4: 1.728rem;
@@ -58,7 +58,8 @@ h6 {
 }
 
 p {
-  font-size: var(--fontSize-0);
+  font-size: var(--fontSize-1);
+  line-height: 1.5;
 }
 
 .cta-btn {
@@ -110,8 +111,42 @@ nav li a {
   color: var(--white);
 }
 
-.internago-img{
-  width: 15%;
+.internago-img {
+  width: 10rem;
+}
+
+footer {
+  color: var(--white);
+  background-color: var(--dark-blue);
+  display: flex;
+  padding: var(--medium-gap) var(--big-gap);
+  justify-content: space-between;
+}
+
+.footer-left {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-left svg {
+width: 2rem;
+}
+
+.copyright-text {
+  font-size: var(--fontSize-0);
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right p {
+  margin-bottom: var(--small-gap);
+}
+.footer-right p:last-child {
+  margin-bottom:0;
 }
 
 
