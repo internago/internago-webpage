@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import waveimg from "../images/graphics/wave.png"
 
 const CTA = ({heading, text, btn}) => {  
     return (

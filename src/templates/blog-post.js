@@ -3,11 +3,15 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CTA from "../components/cta"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const image = post.frontmatter.featuredimage 
+  const heading = "Want to know more?"
+  const text = ""
+  const btn = "Contact us today"
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -15,22 +19,20 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+      <section className="blog-post">
+      
+          <h2 itemProp="headline">{post.frontmatter.title}</h2>
           <p>{post.frontmatter.date}</p>
-        </header>
+          <div className="img-wrapper"><img src={image} alt= "featured image thumbnail for post" itemProp="image"></img></div>
+       
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
-      </article>
-      
+
+        <a className="go-back" href="/blog">&larr; Go back to blog overview</a>
+      </section>
+      <CTA heading={heading} text={text} btn={btn}/>
     </Layout>
   )
 }

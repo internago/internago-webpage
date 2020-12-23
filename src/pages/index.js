@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
+import Clients from "../components/clients"
 import CTA from "../components/cta"
 
 const BlogIndex = ({ data, location }) => {
@@ -16,6 +17,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
       <Hero/>
+      <Clients/>
       <CTA heading={heading} text={text} btn={btn}/>
     </Layout>
   )

@@ -38,7 +38,7 @@ const BlogIndex = ({ data, location }) => {
             return (
               <div className="blog-card" key={post.fields.slug}>
                 <div>
-                  <img src={image} alt= "featured image thumbnail for post" itemProp="image"></img>
+                  <div className="img-wrapper"><img src={image} alt= "featured image thumbnail for post" itemProp="image"></img></div>
                   <h3 itemProp="headline">{title}</h3>
                   <small >{post.frontmatter.date}</small>
         
