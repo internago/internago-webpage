@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import Clients from "../components/clients"
+import Services from "../components/services"
 import CTA from "../components/cta"
 
 const BlogIndex = ({ data, location }) => {
@@ -18,6 +19,7 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="Home" />
       <Hero/>
       <Clients/>
+      <Services/>
       <CTA heading={heading} text={text} btn={btn}/>
     </Layout>
   )
