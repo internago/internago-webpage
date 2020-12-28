@@ -9,6 +9,7 @@ import Sidebar from "../components/sidebar"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const tags = post.frontmatter.tags
   const heading = "Want to know more?"
   const text = ""
   const btn = "Contact us today"
@@ -21,15 +22,24 @@ const BlogPostTemplate = ({ data, location }) => {
       />
 
       <div className="blogpost-parent">
-          <section className="blog-post">
+          <section className="blogpost">
         
             <h2 itemProp="headline">{post.frontmatter.title}</h2>
-            <p>{post.frontmatter.date}</p>
+            <p className="date-and-tags">
+              {post.frontmatter.date}  
+              <ul className="taglist">
+                  {tags.map((tag) => (
+                    <li key={tag + `tag`}>
+                      <Link to={`/tags/${(tag)}/`}>{tag}</Link>
+                    </li>
+                  ))}
+                </ul>
+            </p>
             <div className="img-wrapper"><img src={post.frontmatter.featuredimage} alt= "featured image thumbnail for post" itemProp="image"></img></div>
           
             <section
               dangerouslySetInnerHTML={{ __html: post.html }}
-              itemProp="articleBody"
+              itemProp="articleBody" className="blog-text"
             />
 
             <a className="go-back" href="/blog">&larr; Go back to blog overview</a>
@@ -65,6 +75,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         featuredimage
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

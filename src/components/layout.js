@@ -28,7 +28,7 @@ const Layout = ({ location, title, children }) => {
 
       
       <nav>
-        <img src={Logo} className='internago-img'></img>
+        <a href="/"><img src={Logo} className='internago-img'></img></a>
       
           <ul>
             <li><a href="/">Home</a></li>
