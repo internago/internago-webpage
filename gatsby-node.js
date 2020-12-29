@@ -41,6 +41,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // `context` is available in the template as a prop and as a variable in GraphQL
 
   if (posts.length > 0) {
+
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
@@ -55,6 +56,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     })
+
   }
 }
 

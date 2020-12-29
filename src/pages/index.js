@@ -8,6 +8,7 @@ import Clients from "../components/clients"
 import Services from "../components/services"
 import Markets from "../components/markets"
 import WhyInternago from "../components/whyinternago"
+import HowItWorks from "../components/howitworks"
 import CTA from "../components/cta"
 
 const BlogIndex = ({ data, location }) => {
@@ -24,6 +25,7 @@ const BlogIndex = ({ data, location }) => {
       <Services/>
       <Markets/>
       <WhyInternago/>
+      <HowItWorks/>
       <CTA heading={heading} text={text} btn={btn}/>
     </Layout>
   )

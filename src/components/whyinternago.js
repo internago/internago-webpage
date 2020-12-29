@@ -11,7 +11,7 @@ import diagramicon from "../images/icons/diagram.png"
 const WhyInternago = ({}) => {
     return (
         <section className="why-internago">
-            <h2>Why Internago</h2>
+            <h2>Why Internago?</h2>
             <div className="why-internago-cards-wrapper">
                 <div className="icon-card">
                    <img src={globeicon}></img>
