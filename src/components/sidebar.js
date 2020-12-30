@@ -2,8 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 const Sidebar = ({allPosts}) => {  
-  
-  let sixTimes = ["","","","","",""]
 
   let allTags = []
   allPosts.map((individualPost) => 

@@ -9,6 +9,20 @@ const Layout = ({ location, title, children }) => {
   const isRootPath = location.pathname === rootPath
   let header
 
+  /*
+  const showsub = () => {
+    const submenu = document.querySelector('.nav-link')
+    const subitems = document.querySelector('.submenu')
+  
+    submenu.addEventListener('click', () => {
+       subitems.classList.toggle('nav-active')
+      
+      
+  })
+  }
+
+  */
+
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
@@ -21,13 +35,15 @@ const Layout = ({ location, title, children }) => {
         {title}
       </Link>
     )
-  }
+    }
+  
+  
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
 
       
-      <nav>
+      <nav className="main-nav">
         <a href="/"><img src={Logo} className='internago-img'></img></a>
       
           <ul>
@@ -39,8 +55,22 @@ const Layout = ({ location, title, children }) => {
             <li><a href="#">About us</a></li>
             <li><a href="#" className="contact-btn">Contact us</a></li>
             <li><a href="#" className="cta-btn">Book a demo</a></li>
+            <li className="nav-item dropdown">
+            <li className="nav-link">Products</li>
+            <div className="submenu">
+                <ul className="submenu-items">
+                    <li className="submenu-item"><a href="home" className="submenu-link">Product #1</a></li>
+                    <li className="submenu-item"><a href="home" className="submenu-link">Product #2</a></li>
+                    <li className="submenu-item"><a href="home" className="submenu-link">Product #3</a></li>
+                </ul>
+            </div>
+        </li> 
           </ul>
+
+         
       </nav>
+
+
 
       <main>{children}</main>
 
@@ -71,10 +101,11 @@ const Layout = ({ location, title, children }) => {
           <p>Internago France<br/>39, Av. Pierre 1er de Serbie<br/>75008 Paris<br/>France</p>
           <p>Internago Italy<br/>Corso Vercelli, 57<br/>20144 Milano<br/>Italy</p>
         </div>
-
       </footer>
-    </div>
+      </div>
+    
   )
 }
+
 
 export default Layout

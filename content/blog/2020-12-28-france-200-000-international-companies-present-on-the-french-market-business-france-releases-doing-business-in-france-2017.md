@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "France: 200 000 international companies present on the French market"
+title: "200 000 international companies present on the French market"
 date: 2017-11-06T13:18:31.109Z
 featuredimage: /images/paris.jpg
 tags:
