@@ -11,10 +11,8 @@ const HowItWorks = ({}) => {
             <h2>How it works</h2>
             <div className="analyse">
                 <div className="graphic-img">
-                    <span className="circle c-one">
-                        <p>1</p>
-                        </span>
-                        <img src={analyseimg}></img></div>
+                   
+                        <img src={analyseimg} className="portal-img"></img></div>
                 <div className="txt-block">
                     <h3>Analyse</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -25,10 +23,11 @@ const HowItWorks = ({}) => {
                     <h3>Digitalize</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                 </div>
-                <div className="graphic-img"><span className="circle c-two"><p>2</p></span><img src={digitalizeimg}></img></div>
+                <div className="graphic-img"><img src={digitalizeimg} className="portal-img"></img></div>
             </div>
             <div className="optimize">
-                <div className="graphic-img"><span className="circle c-three"><p>3</p></span><img src={optimizeimg}></img></div>
+                <div className="graphic-img"><img src={optimizeimg} className="portal-img"></img></div>
+            
                 <div className="txt-block">
                     <h3>Optimize</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>

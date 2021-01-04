@@ -55,16 +55,7 @@ const Layout = ({ location, title, children }) => {
             <li><a href="#">About us</a></li>
             <li><a href="#" className="contact-btn">Contact us</a></li>
             <li><a href="#" className="cta-btn">Book a demo</a></li>
-            <li className="nav-item dropdown">
-            <li className="nav-link">Products</li>
-            <div className="submenu">
-                <ul className="submenu-items">
-                    <li className="submenu-item"><a href="home" className="submenu-link">Product #1</a></li>
-                    <li className="submenu-item"><a href="home" className="submenu-link">Product #2</a></li>
-                    <li className="submenu-item"><a href="home" className="submenu-link">Product #3</a></li>
-                </ul>
-            </div>
-        </li> 
+
           </ul>
 
          

@@ -18,7 +18,7 @@ const Services = ({ }) => {
                <div className="services-text">
                 <h2>We make the complex simple</h2>
                 <p>A complete range of services to support your international business.
-We provide hands-on support backed up by qualitative and quantitative analysis of relevant industry information that can support you in business critical decisions.</p>
+                        <br /> We provide hands-on support backed up by qualitative and quantitative analysis of relevant industry information that can support you in business critical decisions.</p>
                 <a href="#" className="cta-btn">Read more</a>
               </div>
               <div className="services-graphic"><img src={servicesimg}></img></div>
