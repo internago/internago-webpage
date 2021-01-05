@@ -2,6 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 
 const Sidebar = ({allPosts}) => {  
+  let allSlugs = []
+  allPosts.map((individualPost) => 
+    allSlugs.push(individualPost.fields.slug),
+  )
+  allSlugs = allSlugs.slice(0, 6)
 
   let allTags = []
   allPosts.map((individualPost) => 
@@ -16,10 +21,6 @@ const Sidebar = ({allPosts}) => {
     allTitles.push(individualPost.frontmatter.title),
   )
 
-  /*if (allTitles.length > 6) {
-    allTitles.pop()
-  }*/
-
   allTitles = allTitles.slice(0, 6)
 
 
@@ -33,9 +34,9 @@ const Sidebar = ({allPosts}) => {
       <div className="sidebar-recent">
         <h3>Recent Posts</h3>
         <ul className="recent-ul">
-          {allTitles.map((title) => (
+          {allTitles.map((title, index) => (
             <li className="recent-li" key={title + `title`}>
-              <Link to={`${(title)}/`}>{title}</Link>
+              <a href={`${(allSlugs[index])}`}>{title}</a>
             </li>
           ))}
         </ul> 
@@ -45,7 +46,7 @@ const Sidebar = ({allPosts}) => {
         <ul className="categories-ul">
           {allTags.map((tag) => (
             <li className="categories-li" key={tag + `tag`} > 
-              <Link to={`/tags/${(tag)}/`}>{tag}</Link>
+              <a href={`/blog?filter=${(tag.toLowerCase())}`}>{tag}</a>
             </li>
           ))}
         </ul> 

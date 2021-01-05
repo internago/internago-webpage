@@ -33,7 +33,7 @@ const BlogPostTemplate = ({ data, location }) => {
             <ul className="taglist">
               {tags.map((tag) => (
                 <li key={tag + `tag`}>
-                  <Link to={`/tags/${(tag)}/`}>{tag}</Link>
+                  <a href={`/blog?filter=${(tag.toLowerCase())}`}>{tag}</a>
                 </li>
               ))}
             </ul>
@@ -45,12 +45,16 @@ const BlogPostTemplate = ({ data, location }) => {
             itemProp="articleBody" className="blog-text"
           />
 
-          <a className="go-back" href="/blog">&larr; Go back to blog overview</a>
+          <a className="go-back" href="/blog?filter=all">&larr; Go back to blog overview</a>
+
+          <div className="mobile-about">
+            <h3>About Internago</h3>
+            <p>Internago offers subsidiary management, HR and international payroll services combined with international payroll software and professional business advisory services. </p>
+          </div> 
         </section>
         
-
       <Sidebar allPosts={allPosts} className="sidebar"/>
-        
+ 
       </div>
       <CTA heading={heading} text={text} btn={btn}/>
     </Layout>

@@ -3,6 +3,10 @@ import { Link } from "gatsby"
 
 const Blogcards = ({filteredPosts}) => {  
     let postsToDisplay = filteredPosts.array.slice(0, filteredPosts.number)
+
+    function refreshPage () {
+      window.location.reload()
+    }
     
     return (
     <section className="overview-section">
@@ -21,7 +25,7 @@ const Blogcards = ({filteredPosts}) => {
                 <small>{post.frontmatter.date}  ||
                 <ul className="overview-taglist">
                   {thisPostsTags.map((tag) => (
-                    <li key={tag + `tag`}><Link to={`/tags/${(tag)}/`}>{tag}</Link> </li>
+                    <li key={tag + `tag`}><a href={`/blog?filter=${(tag.toLowerCase())}`}>{tag}</a></li>
                   ))}
                 </ul>  
                 </small>        
