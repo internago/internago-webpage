@@ -486,7 +486,7 @@ footer {
   }
 
   .hero-graphic {
-
+    margin-left: 0px;
     width: 85%;
    
   }
@@ -523,6 +523,7 @@ footer {
   display: flex;
   flex-direction: column;
   margin-top: var(--big-gap);
+  
 
 }
 .services-up,
@@ -579,8 +580,7 @@ footer {
 @media only screen and (max-width: 1100px){
   .services-homepage {
     display: block;
-    flex-direction: column;
-    margin-top: var(--medium-gap);
+    margin-top: var(--medium-gap);  
   }
   
   .services-up{
@@ -599,6 +599,8 @@ footer {
   }
   .portal-graphic{
     margin-top: var(--medium-gap);
+    text-align: left;
+
   }
   .services-graphic{
     margin-top: var(--medium-gap);
@@ -610,8 +612,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     width: 80%;
-    margin-left: var(--xl-gap);
-    margin-right: var(--xl-gap);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .portal-text h2,
@@ -622,7 +624,7 @@ footer {
   .portal-text p,
   .services-text p {
     margin-top: var(--small-gap);
-    text-align: left;
+    text-align: center;
     color: var(--dark-grey);
     font-size: var(--fontSize-2);
     margin-bottom: var(--small-gap);
@@ -641,8 +643,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     width: 80%;
-    margin-left: var(--xl-gap);
-    margin-right: var(--xl-gap);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -653,19 +655,38 @@ footer {
   .services-graphic img {
     width: 80%;
   }
+
+  
 }
 
 
 /*-------------------------SERVICES MOBILE-------------------------*/
 @media only screen and (max-width: 600px){
+  
+
+  .portal-text p,
+  .services-text p {
+  text-align: center;
+
+  }
+
   .portal-text h2,
   .services-text h2 {
     font-size: var(--fontSize-3);
+   
   }
   
   .portal-text p,
   .services-text p {
     font-size: var(--fontSize-1);
+  }
+
+.portal-graphic {
+      text-align: left;
+}
+.portal-graphic img,
+  .services-graphic img {
+    width: 75%;
   }
 }
 
@@ -717,16 +738,12 @@ footer {
   
   .markets-left {
     display: block;
-    flex-direction: column;
     justify-content: center;
-    width: 70%;
-    margin-left: var(--xl-gap);
-    margin-right: var(--xl-gap);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    flex-basis: 45%;
-    flex-direction: column;
     margin-top: var(--medium-gap);
-    margin-right: var(--medium-gap);
   }
   
   .markets-left p {
@@ -1085,6 +1102,16 @@ footer {
   padding-top: 5.5rem;
 }
 
+.blogpost {
+  margin: 0 var(--big-gap) var(--medium-gap);
+  padding-top: var(--medium-gap);
+  width: 75%;
+}
+
+.blogpost h2 {
+  margin-bottom: 0.8rem;
+}
+
 .taglist{
   height: 21px;
   display: inline-block;
@@ -1097,32 +1124,31 @@ footer {
   margin-right: var(--xs-gap);
 }
 
-.blogpost h4,
-.blogpost div {
-  margin-bottom: var(--small-gap);
-}
-
-.blogpost h5,
-.blogpost p,
-.blogpost li {
-  margin-bottom: var(--xs-gap);
-}
-
-.blogpost {
-  margin: 0 var(--big-gap);
-  padding-top: var(--medium-gap);
-  width: 75%;
-}
-
 .blogpost .img-wrapper {
   width: 100%;
   overflow: hidden;
-  height: 27rem;
+  max-height: 30rem;
   background-color: var(--dark-internago-blue);
 }
 
 .blogpost img {
   width: 100%;
+}
+
+.blogpost h4,
+.blogpost div {
+  margin-bottom: 1rem;
+}
+
+.blogpost h5,
+.blogpost p,
+.blogpost li {
+  margin-bottom: 1rem;
+}
+
+.blogpost h4,
+.blogpost h5 {
+  margin-top: 2.6rem;
 }
 
 .blogpost p,
@@ -1208,7 +1234,7 @@ footer {
   display: none;
 }
 
-/*-------------------------BLOG POST BELOW TABLET-------------------------*/
+/*-------------------------BLOG POST TABLET-------------------------*/
 @media only screen and (max-width: 992px) {
   .sidebar {
     display: none;
@@ -1216,10 +1242,27 @@ footer {
 
   .mobile-about {
     display: inline-block;
-    margin: var(--medium-gap);
+    margin-top: var(--medium-gap);
     padding: var(--small-gap);
     background-color: var(--dark-internago-blue);
+    border-radius: 25px;
+  }
+
+  .mobile-about h3{
     color: var(--white);
+    margin-bottom: var(--xs-gap);
+  }
+
+  .mobile-about p{
+    color: var(--white);
+  }
+}
+
+/*-------------------------BLOG POST MOBILE-------------------------*/
+@media only screen and (max-width: 600px) {
+  .taglist{
+    margin-left: 0;
+    width: 100%;
   }
 }
 
