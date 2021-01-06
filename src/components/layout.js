@@ -8,20 +8,21 @@ const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
+  let menuDisplayed = false
+  let whatWeOfferDisplayed = false
 
-  /*
-  const showsub = () => {
-    const submenu = document.querySelector('.nav-link')
-    const subitems = document.querySelector('.submenu')
-  
-    submenu.addEventListener('click', () => {
-       subitems.classList.toggle('nav-active')
-      
-      
-  })
+
+  //Functions
+  function toggleMenu() {
+    if (menuDisplayed){
+      document.querySelector(".desktop-menu").style.visibility = "hidden"
+      menuDisplayed = false
+    } else {
+      document.querySelector(".desktop-menu").style.visibility = "visible"
+      menuDisplayed = true
+    }
   }
 
-  */
 
   if (isRootPath) {
     header = (
@@ -45,20 +46,27 @@ const Layout = ({ location, title, children }) => {
       
       <nav className="main-nav">
         <a href="/"><img src={Logo} className='internago-img'></img></a>
-      
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#">What we offer 
-            <svg className="toggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.51465 8.4652L11.9996 16.9502L20.4846 8.4652L19.0706 7.0502L11.9996 14.1222L4.92865 7.0502L3.51465 8.4652Z" fill="#00446E"/></svg>
-            </a></li>
-            <li><a href="/blog?filter=all">Blog and News</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#" className="neutral-btn">Contact us</a></li>
-            <li><a href="#" className="cta-btn">Book a demo</a></li>
-
-          </ul>
-
-         
+            <menu className="hamburger-menu" onClick={toggleMenu}>
+              <div className="hamburger-line-1"></div>
+              <div className="hamburger-line-2"></div>
+              <div className="hamburger-line-3"></div>
+            </menu>
+            <menu className="desktop-menu">
+              <li><a href="/">Home</a></li>
+              <span className="what-we-offer">
+                <li className="what-we-offer-listitem">What we offer
+                  <svg className="toggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.51465 8.4652L11.9996 16.9502L20.4846 8.4652L19.0706 7.0502L11.9996 14.1222L4.92865 7.0502L3.51465 8.4652Z" fill="#00446E"/></svg>
+                </li>
+                <menu className="what-we-offer-submenu">
+                  <li><a href="#">Payroll Portal</a></li>
+                  <li><a href="#">Services</a></li>
+                </menu>
+              </span>
+              <li><a href="/blog?filter=all">Blog and News</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#" className="neutral-btn btn">Contact us</a></li>
+              <li><a href="#" className="cta-btn btn">Book a demo</a></li>
+            </menu> 
       </nav>
 
 

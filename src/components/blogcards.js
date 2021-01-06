@@ -3,10 +3,6 @@ import { Link } from "gatsby"
 
 const Blogcards = ({filteredPosts}) => {  
     let postsToDisplay = filteredPosts.array.slice(0, filteredPosts.number)
-
-    function refreshPage () {
-      window.location.reload()
-    }
     
     return (
     <section className="overview-section">
@@ -16,6 +12,9 @@ const Blogcards = ({filteredPosts}) => {
           const image = post.frontmatter.featuredimage 
           let thisPostsTags = post.frontmatter.tags
 
+          if (thisPostsTags == null) {
+            thisPostsTags = []
+          }
 
           return (
             <div className="blog-card" key={post.fields.slug}>
@@ -37,10 +36,7 @@ const Blogcards = ({filteredPosts}) => {
                   itemProp="description"
                 />
               </div> 
-                
-
               <Link className="read-more" to={post.fields.slug} itemProp="url">Read more</Link>
-   
             </div>
           )
         })}

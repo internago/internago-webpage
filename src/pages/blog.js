@@ -8,35 +8,47 @@ import Blogcards from "../components/blogcards"
 
 
 const BlogIndex = ({ data, location }) => {
+  //General page settings
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
   let numberOfPosts = 6 
 
+
+  //Variables for filtering
   let params = new URLSearchParams(document.location.search.substring(1));
   let query = params.get("filter")
-  let postsToArray = []
+  let postsToDisplay = []
+  let allTags = []
 
 
+  //Prompt to CTA-compontent
+  const heading = "Want to know more?"
+  const text = ""
+  const btn = "Contact us today"
+
+
+  //Program flow
+  filteringPostsToDisplay()
+  captureAllTags()
+
+
+  //Functions
   function paramToUserInput(query) {
     console.log(query)
     console.log(document.querySelector(`#${query}`))
-    //document.querySelector(`#${query}`).setAttribute("selected");
   }
 
 
-  if (query == "all"){
-    postsToArray = posts
-  } else {
-    postsToArray = posts.filter(post => post.frontmatter.tags.includes(query[0].toUpperCase() + query.substring(1)))
+  function filteringPostsToDisplay() {
+    if (query == "all"){
+      postsToDisplay = posts
+    } else {
+      let postsWithoutNull = posts.filter(post => post.frontmatter.tags !== null)
+      postsToDisplay = postsWithoutNull.filter(post => post.frontmatter.tags.includes(query[0].toUpperCase() + query.substring(1)))
+    }
   }
+  
 
-  
-  const [filteredPosts, setState] = useState({
-    array: postsToArray, 
-    number: numberOfPosts
-  })
-  
-  
   function applyFilter() {
     let userInput = document.querySelector(".filter-input").value
     document.location = `/blog?filter=${(userInput.toLowerCase())}`
@@ -53,21 +65,25 @@ const BlogIndex = ({ data, location }) => {
   }
 
 
-  let allTags = []
-  posts.map((individualPost) => 
-    allTags.push(individualPost.frontmatter.tags),
-  )
-
-  allTags = allTags.flat()
-  allTags = Array.from(new Set(allTags))
-  allTags = allTags.filter(tag => tag != null)
-
-
-  const heading = "Want to know more?"
-  const text = ""
-  const btn = "Contact us today"
+  function captureAllTags() {
+    posts.map((individualPost) => 
+      allTags.push(individualPost.frontmatter.tags),
+    )
+    allTags = allTags.flat()
+    allTags = Array.from(new Set(allTags))
+    allTags = allTags.filter(tag => tag != null)
+  }
 
 
+  //useState to be declared after all functions and variables
+  const [filteredPosts, setState] = useState({
+    array: postsToDisplay, 
+    number: numberOfPosts
+  })
+
+
+
+  //Print content
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -80,6 +96,7 @@ const BlogIndex = ({ data, location }) => {
       </Layout>
     )
   }
+
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -96,15 +113,17 @@ const BlogIndex = ({ data, location }) => {
           </select>
           <button className="neutral-btn apply-filter" onClick={applyFilter} type="button">Filter</button>
         </form>
-        <div></div>
-        
+        <div className="empty-div-for-grid"></div>
+        <div className="all-posts-btn-wrapper">
+          <a href="allposts"><button className="view-all-btn">View list of posts</button></a>
+        </div>
       </div>
       
       <Blogcards filteredPosts={filteredPosts}/>
+
       <div className="view-more-wrapper">
         <button className="cta-btn view-more-btn" onClick={viewMorePosts}>View more posts</button>
-        <a href="allposts"><button className="neutral-btn">View all posts</button></a>
-        </div>
+      </div>
       
       <CTA heading={heading} text={text} btn={btn}/>
     </Layout>

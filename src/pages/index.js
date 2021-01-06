@@ -13,7 +13,7 @@ import CTA from "../components/cta"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const heading = "Whats next"
+  const heading = "What's next?"
   const text = "A complete range of services to support your international business. We provide hands-on support backed up by qualitative and quantitative analysis of relevant industry information that can support you in business critical decisions."
   const btn = "Contact us today"
 

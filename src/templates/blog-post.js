@@ -9,10 +9,13 @@ import Sidebar from "../components/sidebar"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-
   const allPosts = data.allMarkdownRemark.nodes
+  let tags = post.frontmatter.tags
+  
+  if (tags == null) {
+    tags = []
+  }
 
-  const tags = post.frontmatter.tags
   const heading = "Want to know more?"
   const text = ""
   const btn = "Contact us today"
