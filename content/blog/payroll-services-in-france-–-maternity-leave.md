@@ -2,10 +2,10 @@
 layout: blog
 title: Payroll services in France – Maternity leave
 date: 2020-11-11T13:39:23.118Z
-featuredimage: /images/paris.jpg
 tags:
   - France
   - Payroll
+featuredimage: /images/payroll-maternity.png
 ---
 <!--StartFragment-->
 
