@@ -2,10 +2,10 @@
 layout: blog
 title: Nathalie Vautier joins Internago
 date: 2020-07-01T12:28:07.535Z
-featuredimage: /images/nathalie.jpeg
 tags:
   - France
   - News
+featuredimage: /images/nathalie-landscape.jpeg
 ---
 <!--StartFragment-->
 
