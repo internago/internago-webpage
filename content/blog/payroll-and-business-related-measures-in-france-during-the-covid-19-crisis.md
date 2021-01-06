@@ -2,6 +2,9 @@
 layout: blog
 title: Payroll and business related measures in France during the COVID-19 crisis
 date: 2020-03-27T16:36:05.090Z
+tags:
+  - Reports
+  - Payroll
 featuredimage: /images/paris.jpg
 ---
 #### Due to the COVID-19 outbreak, the French state has planned a number of measures to support French companies and self-employed. Internago has summarized the package and some implications for your payroll services in France below:
