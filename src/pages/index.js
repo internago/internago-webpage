@@ -11,7 +11,7 @@ import WhyInternago from "../components/whyinternago"
 import HowItWorks from "../components/howitworks"
 import CTA from "../components/cta"
 
-const BlogIndex = ({ data, location }) => {
+const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const heading = "What's next?"
   const text = "A complete range of services to support your international business. We provide hands-on support backed up by qualitative and quantitative analysis of relevant industry information that can support you in business critical decisions."
@@ -31,7 +31,7 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default Index
 
 export const pageQuery = graphql`
   query {

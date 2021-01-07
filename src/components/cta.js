@@ -4,9 +4,11 @@ import { Link } from "gatsby"
 const CTA = ({heading, text, btn}) => {  
     return (
       <section className="cta-section">
-          <h2>{heading}</h2>
-          <p>{text}</p>
-          <a href="mailto:info@internago.com" className="cta-btn">{btn}</a>
+          <div className="cta-wrapper">
+            <h2>{heading}</h2>
+            <p>{text}</p>
+            <a href="mailto:info@internago.com" className="cta-btn">{btn}</a>
+          </div>
       </section>
     )
   }

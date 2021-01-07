@@ -15,13 +15,48 @@ const Layout = ({ location, title, children }) => {
   //Functions
   function toggleMenu() {
     if (menuDisplayed){
-      document.querySelector(".desktop-menu").style.visibility = "hidden"
+      slideOutMenu()
+      crossToHamburger()
       menuDisplayed = false
     } else {
-      document.querySelector(".desktop-menu").style.visibility = "visible"
+      slideInMenu()
+      hamburgerToCross()
       menuDisplayed = true
     }
   }
+
+  function hamburgerToCross() {
+    setTimeout(() => {
+        document.querySelector(".line1").style.transform = "translateY(13px) rotate(45deg)";
+        document.querySelector(".line2").style.opacity = "0";
+        document.querySelector(".line3").style.transform = "translateY(-13px) rotate(-45deg)";
+    }, 900);
+    document.querySelector(".line1").style.animation = "line1ToCross 0.9s";
+    document.querySelector(".line2").style.animation = "line2ToCross 0.9s";
+    document.querySelector(".line3").style.animation = "line3ToCross 0.9s";
+}
+
+
+function crossToHamburger() {
+    setTimeout(() => {
+        document.querySelector(".line1").style.transform = "translateY(0px) rotate(0deg)";
+        document.querySelector(".line2").style.opacity = "1";
+        document.querySelector(".line3").style.transform = "translateY(0px) rotate(0deg)";
+    }, 900);
+    document.querySelector(".line1").style.animation = "line1ToHamburger 0.9s";
+    document.querySelector(".line2").style.animation = "line2ToHamburger 0.9s";
+    document.querySelector(".line3").style.animation = "line3ToHamburger 0.9s";
+}
+
+function slideOutMenu() {
+    document.querySelector(".mobile-menu").style.width = "0"
+    document.querySelector(".mobile-menu").style.padding = "var(--small-gap) 0";
+}
+
+function slideInMenu() {
+    document.querySelector(".mobile-menu").style.width = "200px"
+    document.querySelector(".mobile-menu").style.padding = "var(--small-gap)"
+}
 
 
   if (isRootPath) {
@@ -45,12 +80,22 @@ const Layout = ({ location, title, children }) => {
 
       
       <nav className="main-nav">
-        <a href="/"><img src={Logo} className='internago-img'></img></a>
+        <a href="/"><img src={Logo} alt="logo of internago" className='internago-img'></img></a>
             <menu className="hamburger-menu" onClick={toggleMenu}>
-              <div className="hamburger-line-1"></div>
-              <div className="hamburger-line-2"></div>
-              <div className="hamburger-line-3"></div>
+              <div className="line1"></div>
+              <div className="line2"></div>
+              <div className="line3"></div>
             </menu>
+            <menu className="mobile-menu">
+              <li><a href="/">Home</a></li>
+              <li><a href="/payrollportal">Payroll Portal</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="/blog?filter=all">Blog and News</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Book a demo</a></li>
+            </menu> 
+
             <menu className="desktop-menu">
               <li><a href="/">Home</a></li>
               <span className="what-we-offer">
@@ -58,8 +103,8 @@ const Layout = ({ location, title, children }) => {
                   <svg className="toggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.51465 8.4652L11.9996 16.9502L20.4846 8.4652L19.0706 7.0502L11.9996 14.1222L4.92865 7.0502L3.51465 8.4652Z" fill="#00446E"/></svg>
                 </li>
                 <menu className="what-we-offer-submenu">
-                  <li><a href="#">Payroll Portal</a></li>
-                  <li><a href="#">Services</a></li>
+                  <li><a href="/payrollportal">Payroll Portal</a></li>
+                  <li><a href="/servicespage">Services</a></li>
                 </menu>
               </span>
               <li><a href="/blog?filter=all">Blog and News</a></li>
@@ -75,7 +120,7 @@ const Layout = ({ location, title, children }) => {
 
       <footer>
         <div className="footer-left">
-          <img src={Logo} className="internago-img"></img>
+          <img src={Logo} alt="logo of internago" className="internago-img"></img>
           <div className="bottom-left">
             <div className="footer-icons">
               <a href="https://twitter.com/Interna_GO">

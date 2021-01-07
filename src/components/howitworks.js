@@ -10,21 +10,21 @@ const HowItWorks = ({}) => {
         <section className="how-it-works-section">
             <h2>How it works</h2>
             <div className="analyse">
-                <div className="graphic-img"><img src={analyseimg} className="portal-img"></img></div>
+                <div className="graphic-img"><img src={analyseimg} alt="illustration of technical chaos" className="portal-img"></img></div>
                 <div className="txt-block">
                     <h3>Analyse</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                 </div>
             </div>
             <div className="digitalize">
-                <div className="graphic-img"><img src={digitalizeimg} className="portal-img"></img></div>
+                <div className="graphic-img"><img src={digitalizeimg} alt="illustration of a keyboard and hands with different digitalised motives around it" className="portal-img"></img></div>
                 <div className="txt-block">
                     <h3>Digitalize</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                 </div>
             </div>
             <div className="optimize">
-                <div className="graphic-img"><img src={optimizeimg} className="portal-img"></img></div>
+                <div className="graphic-img"><img src={optimizeimg} alt="illustration of three people representing different diagrams" className="portal-img"></img></div>
                 <div className="txt-block">
                     <h3>Optimize</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>

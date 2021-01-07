@@ -170,6 +170,10 @@ height: auto;
   display: none;
 }
 
+.mobile-menu {
+  display: none;
+}
+
 nav {
   background-color: var(--white);
   display: flex;
@@ -183,21 +187,21 @@ nav {
   z-index: 1;
 }
 
-nav menu {
-  margin: auto 0;
+nav li a {
+  color: var(--dark-internago-blue);
+  text-decoration: none;
+  font-weight: 600;
 }
 
-nav li {
+.desktop-menu {
+  display: block;
+}
+
+.desktop-menu li {
   display: inline-block;
   margin: auto 0 auto var(--small-gap);
   height: 27.2px;
   color: var(--dark-internago-blue);
-  font-weight: 600;
-}
-
-nav li a {
-  color: var(--dark-internago-blue);
-  text-decoration: none;
   font-weight: 600;
 }
 
@@ -212,8 +216,10 @@ nav li a {
   position: relative;
 }
 
+
 .what-we-offer:hover .what-we-offer-submenu {
-  visibility: visible;
+  height: 150px;
+  opacity: 1;
 }
 
 .what-we-offer-submenu {
@@ -225,13 +231,16 @@ nav li a {
   padding: 0 var(--small-gap) var(--small-gap);
   width: 200px;
   border-radius: 25px;
-  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
 }
 
 .what-we-offer-submenu li{
   display: block;
   margin-left: 0;
-  padding-top: var(--xs-gap);
+  padding-top: var(--small-gap);
   height: auto;
 }
 
@@ -239,9 +248,7 @@ nav li a {
   width: 10rem;
 }
 
-.burger-menu {
-  display:none;
-}
+
 
 
 /*-------------------------FOOTER-------------------------*/
@@ -302,58 +309,31 @@ footer {
     font-weight: 400;
   }
 
-  .what-we-offer-listitem {
-    visibility: hidden;
-    position: absolute;
-  }
-
-  .what-we-offer-submenu {
-    visibility: inherit;
-    position: relative;
-    background-color: rgba(255,255,255,0.0);
-    top: 0;
-    padding: 0;
-    background-color: none;
-  }
-  
-  .what-we-offer-submenu li{
-    padding-top: 0;
-  }
-
   .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
     position: absolute;
     top: 75px;
-    right: 0;
+    right: 0px;
     background-color: rgba(255,255,255,0.9);
-    padding: var(--small-gap);
-    width: 200px;
+    padding: var(--small-gap) 0;
+    width: 0px;
     border-bottom-left-radius: 25px;
-    visibility: hidden;
+    transition: 1s;
+    overflow-x: hidden;
+    white-space: nowrap;
   }
 
-  .desktop-menu li{
+  .mobile-menu li{
     display: block;
     margin-left: 0;
     margin-bottom: var(--xs-gap);
     font-size: var(--fontSize-2);
     height: 28px;
-  }
-
-  .desktop-menu .btn {
-    background-color: var(--white);
-    color: var(--dark-internago-blue);
-    border: none;
-    font-size: var(--fontSize-2);
-    font-weight: 400;
-    padding: 0;
-  }
-
-  .btn:hover {
-    color: var(--light-internago-blue);
-  }
-  
-  .btn:active {
-    top: 0;
+    word-wrap: none;
   }
 
   .hamburger-menu {
@@ -384,6 +364,43 @@ footer {
   }
 }
 
+/*-------------------------NAVBAR ANIMATIONS-------------------------*/
+@keyframes line1ToCross {
+  0% {transform: translateY(0px) rotate(0deg);}
+  50% {transform: translateY(13px) rotate(0deg);}
+  100% {transform: translateY(13px) rotate(45deg);}
+}
+
+@keyframes line2ToCross {
+  0% {opacity: 1;}
+  70% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+@keyframes line3ToCross {
+  0% {transform: translateY(0px) rotate(0deg);}
+  50% {transform: translateY(-13px) rotate(0deg);}
+  100% {transform: translateY(-13px) rotate(-45deg);}
+}
+
+@keyframes line1ToHamburger {
+  0% {transform: translateY(13px) rotate(45deg);}
+  50% {transform: translateY(13px) rotate(0deg);}
+  100% {transform: translateY(0px) rotate(0deg);}
+}
+
+@keyframes line2ToHamburger {
+  0% {opacity: 0;}
+  95% {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+@keyframes line3ToHamburger {
+  0% {transform: translateY(-13px) rotate(-45deg);}
+  50% {transform: translateY(-13px) rotate(0deg);}
+  100% {transform: translateY(0px) rotate(0deg);}
+}
+
 /*-------------------------FOOTER MOBILE-------------------------*/
 @media only screen and (max-width: 600px){
   footer {
@@ -412,7 +429,9 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  padding-top: var(--big-gap);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cta-section p {
@@ -426,23 +445,13 @@ footer {
 }
 
 /*-------------------------CTA MOBILE-------------------------*/
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1200px){
   .cta-section {
-    height: 29rem;
-    background-image: url("images/graphics/wave.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding-top: var(--big-gap);
+    background-image: url("images/graphics/wave-mobile.png");
   }
   
   .cta-section p {
     width: 70%;
-    margin: var(--small-gap) auto;
-  }
-  
-  .cta-section .cta-btn {
-    display: inline-block;
   }
 }
 
@@ -907,7 +916,7 @@ footer {
   }
 }
 
-/*-------------------------MARKETS BELOW MOBILE-------------------------*/
+/*-------------------------WHY INTERNAGO MOBILE-------------------------*/
   @media only screen and (max-width: 600px){
     .why-internago {
       margin: var(--big-gap) var(--big-gap);
@@ -921,12 +930,12 @@ footer {
     .why-internago h2{
       font-size: var(--fontSize-3);
     }
+
     .why-internago-cards-wrapper {
       margin-top: var(--medium-gap);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: var(--big-gap);
-      grid-row-gap: var(--small-gap);
+      gap: var(--small-gap);
       justify-content: center;
     }
 
@@ -937,7 +946,6 @@ footer {
     }
   
     .icon-card img {
-      height: auto;
       width: 4.5rem;
     }
     
@@ -1041,6 +1049,69 @@ footer {
 
   
 }
+
+/*------------------------------------------------------PAYROLL PORTAL PAGE------------------------------------------------------*/
+/*---------------------------------------WHAT WE OFFER HERO---------------------------------------*/
+.what-we-offer-hero {
+  display: inline-block;
+  padding: var(--big-gap) var(--medium-gap) var(--medium-gap) var(--big-gap);
+  justify-content: center;
+}
+
+.what-we-offer-hero-text {
+  width: 50%;
+  display: inline-block;
+  margin-top: var(--small-gap);
+}
+
+.what-we-offer-hero-text  p {
+  font-size: var(--fontSize-2);
+  color: var(--dark-grey);
+  line-height: 1.8rem;
+  display: inline-block;
+}
+
+.what-we-offer-hero-graphic {
+  display: inline-block;
+  width: 40%;
+  margin-left: var(--medium-gap);
+  vertical-align: top;
+}
+
+/*---------------------------------------PAYROLL PORTAL MANAGEMENT---------------------------------------*/
+.payroll-management {
+  margin: var(--big-gap) var(--big-gap);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.payroll-management-cards-wrapper {
+  margin-top: var(--medium-gap);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--medium-gap);
+}
+
+
+.payroll-icon-card {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 21px;
+  padding: var(--small-gap);
+}
+
+.payroll-icon-card img {
+  height: auto;
+  width: 8rem;
+}
+
+.payroll-icon-card p {
+  color: var(--dark-grey);
+  font-size: var(--fontSize-1);
+  width: 10rem;
+}
+
 
 
 /*------------------------------------------------------BLOG OVERVIEW------------------------------------------------------*/
