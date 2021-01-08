@@ -22,9 +22,9 @@ const BlogIndex = ({ data, location }) => {
 
 
   //Prompt to CTA-compontent
-  const heading = "Want to know more?"
-  const text = ""
-  const btn = "Contact us today"
+  const ctaHeading = "Want to know more?"
+  const ctaText = ""
+  const ctaBtn = "Contact us today"
 
 
   //Program flow
@@ -125,7 +125,7 @@ const BlogIndex = ({ data, location }) => {
         <button className="cta-btn view-more-btn" onClick={viewMorePosts}>View more posts</button>
       </div>
       
-      <CTA heading={heading} text={text} btn={btn}/>
+      <CTA ctaHeading={ctaHeading} ctaText={ctaText} ctaBtn={ctaBtn}/>
     </Layout>
   )
 }

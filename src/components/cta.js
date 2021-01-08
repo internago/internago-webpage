@@ -1,17 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
 
-const CTA = ({heading, text, btn}) => {  
+const CTA = ({ctaHeading, ctaText, ctaBtn}) => {  
     return (
       <section className="cta-section">
           <div className="cta-wrapper">
-            <h2>{heading}</h2>
-            <p>{text}</p>
-            <a href="mailto:info@internago.com" className="cta-btn">{btn}</a>
+            <h2>{ctaHeading}</h2>
+            <p>{ctaText}</p>
+            <a href="mailto:info@internago.com" className="cta-btn">{ctaBtn}</a>
           </div>
       </section>
     )
   }
   
   
-  export default CTA
+export default CTA

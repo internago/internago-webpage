@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import ServicesImg from "../images/graphics/servicespage-img.png"
 
 const ServicesHero = ({}) => {  

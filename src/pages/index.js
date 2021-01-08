@@ -13,9 +13,17 @@ import CTA from "../components/cta"
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const heading = "What's next?"
-  const text = "A complete range of services to support your international business. We provide hands-on support backed up by qualitative and quantitative analysis of relevant industry information that can support you in business critical decisions."
-  const btn = "Contact us today"
+  
+  const ctaHeading = "What's next?"
+  const ctaText = "A complete range of services to support your international business. We provide hands-on support backed up by qualitative and quantitative analysis of relevant industry information that can support you in business critical decisions."
+  const ctaBtn = "Contact us today"
+
+  const marketsHeading = "Your markets – our objective"
+  const marketsText1 = "Internago is currently delivering payroll services and related services on main European markets, both directly or together with well selected local partners."
+  const marketsText2 = "Contact us to know more on how we can support you in France, Italy, Sweden, Germany, Spain, UK, Holland or other countries of interest. Contact our sales team to know more about our services."
+  const marketsText3 = ""
+  const marketsBtn = "Contact country of interest"
+
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -23,10 +31,10 @@ const Index = ({ data, location }) => {
       <Hero/>
       <Clients/>
       <Services/>
-      <Markets/>
+      <Markets marketsHeading={marketsHeading} marketsText1={marketsText1} marketsText2={marketsText2} marketsText3={marketsText3} marketsBtn={marketsBtn}/>
       <WhyInternago/>
       <HowItWorks/>
-      <CTA heading={heading} text={text} btn={btn}/>
+      <CTA ctaHeading={ctaHeading} ctaText={ctaText} ctaBtn={ctaBtn}/>
     </Layout>
   )
 }

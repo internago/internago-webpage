@@ -9,7 +9,6 @@ const Layout = ({ location, title, children }) => {
   const isRootPath = location.pathname === rootPath
   let header
   let menuDisplayed = false
-  let whatWeOfferDisplayed = false
 
 
   //Functions
@@ -89,7 +88,7 @@ function slideInMenu() {
             <menu className="mobile-menu">
               <li><a href="/">Home</a></li>
               <li><a href="/payrollportal">Payroll Portal</a></li>
-              <li><a href="#">Services</a></li>
+              <li><a href="/servicespage">Services</a></li>
               <li><a href="/blog?filter=all">Blog and News</a></li>
               <li><a href="#">About us</a></li>
               <li><a href="#">Contact us</a></li>
