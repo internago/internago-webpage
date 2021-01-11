@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import heroimg from "../images/graphics/hero-img.png"
 
 const Hero = ({}) => {  

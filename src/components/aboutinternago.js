@@ -10,11 +10,11 @@ const AboutInternago = ({ }) => {
                 
                 <div className="internagoaboutimg">
                     <img src={Complex} alt="Illustration of three people representing different diagrams"></img>
-                    
+            
                 </div>
 
                 <div className="internagoabout">
-                    <p><p className="firsletter">Internago</p> was founded with the objective to reduce administrative work and make your international business simple with increased control by digitalization.
+                    <p>Internago was founded with the objective to reduce administrative work and make your international business simple with increased control by digitalization.
                     After working for many years handling the complexity that comes with international business, and running payroll services on foreign markets, we realized that a digital payroll portal to streamline the payroll was needed to make life easier for our customers.  </p>
                 </div>
             </div>
@@ -22,7 +22,7 @@ const AboutInternago = ({ }) => {
                 
                 <div className="internagobelieve">
                     
-                    <p> <p className="firsletter">We believe</p>that payroll outsourcing can be simple and cost efficient through digitalization.
+                    <p>We believethat payroll outsourcing can be simple and cost efficient through digitalization.
                     This is why we developed the Internago Payroll Portal, which enables our customers to save time and keep control over their payroll on many markets from one digital interface.
                     Working with Internago also means that you have one dedicated project manager that follows your business from the start and as it develops over time.
                     Quality is also very important to us and where we don’t deliver through our own payroll, we collaborate with the best and carefully selected local partners to ensure that our customers follow all local regulations. </p>

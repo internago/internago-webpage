@@ -1873,17 +1873,7 @@ margin-top: var(--medium-gap);
 
 }
 
-.internagobelieve p::first-letter {
-  font-size: var(--fontSize-2);
-  color: var(--dark-internago-blue);
-  font-weight: 600;
-}
 
-.internagoabout p::first-letter {
-  font-size: var(--fontSize-2);
-  color: var(--dark-internago-blue);
-  font-weight: 600;
-}
 
 
 
