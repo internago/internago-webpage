@@ -42,6 +42,8 @@ const BlogIndex = ({ data, location }) => {
   function filteringPostsToDisplay() {
     if (query === "all"){
       postsToDisplay = posts
+    } else if (query === null) {
+      postsToDisplay = posts
     } else {
       let postsWithoutNull = posts.filter(post => post.frontmatter.tags !== null)
       postsToDisplay = postsWithoutNull.filter(post => post.frontmatter.tags.includes(query[0].toUpperCase() + query.substring(1)))
