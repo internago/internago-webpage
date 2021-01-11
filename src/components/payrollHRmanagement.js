@@ -42,7 +42,7 @@ const PayrollHRManagement = ({}) => {
                     </div>
              </div>
 
-             <div className="payroll-management-cta"><a href="#" className="cta-btn">Request a demo</a></div>
+             <div className="payroll-management-cta"><a href="mailto:info@internago.com" className="cta-btn">Request a demo</a></div>
         </section>
     )
 }

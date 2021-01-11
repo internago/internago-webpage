@@ -12,7 +12,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const allPosts = data.allMarkdownRemark.nodes
   let tags = post.frontmatter.tags
   
-  if (tags == null) {
+  if (tags === null) {
     tags = []
   }
 

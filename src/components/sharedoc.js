@@ -16,7 +16,7 @@ const ShareDoc = ({}) => {
                 - GDPR conformity
                 - E-mail notification to authorised users
                 - Add users and control access based on need-to-know basis</p>
-                <a href="#" className="cta-btn">Try it today</a>
+                <a href="mailto:info@internago.com" className="cta-btn">Try it today</a>
             </div>
 
             <div className="sharedoc-right">

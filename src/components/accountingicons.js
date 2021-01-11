@@ -32,7 +32,7 @@ const AccountingIcons = ({}) => {
                     </div>
              </div>
 
-             <div className="accounting-icons-cta"><a href="#" className="cta-btn">Ask for a quote</a></div>
+             <div className="accounting-icons-cta"><a href="mailto:info@internago.com" className="cta-btn">Ask for a quote</a></div>
         </section>
     )
 }

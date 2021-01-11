@@ -222,7 +222,12 @@ nav li a {
 }
 
 .what-we-offer {
+  display: inline-block;
   position: relative;
+}
+
+.what-we-offer-listitem {
+  cursor: pointer;
 }
 
 .what-we-offer:hover .what-we-offer-submenu {
@@ -234,7 +239,7 @@ nav li a {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: var(--xs-gap);
+  top: var(--small-gap);
   background-color: rgba(255,255,255,0.9);
   padding: 0 var(--small-gap) var(--small-gap);
   width: 200px;
@@ -1275,6 +1280,8 @@ margin-top: var(--medium-gap);
 .what-we-offer-hero-text {
   width: 50%;
   display: inline-block;
+  padding-right: var(--medium-gap);
+  vertical-align: middle;
 }
 
 .what-we-offer-hero-text  p {
@@ -1303,6 +1310,7 @@ margin-top: var(--medium-gap);
     width: 80%;
     text-align: center;
     align-content: center;
+    padding-right: 0;
   }
   .what-we-offer-hero-text p {
     display: block;
@@ -1394,7 +1402,7 @@ margin-top: var(--medium-gap);
 
 }
 
-/*---------------------------------------SHAREDOC COMPONENTEMENT---------------------------------------*/
+/*---------------------------------------SHAREDOC COMPONENT---------------------------------------*/
 .share-doc{
   align-items: center;
   display: flex;
@@ -1738,19 +1746,23 @@ transition: background-color 0.4s ease;
   width: 25%;
 }
 
-.sidebar-about{
+.sidebar-about {
   padding: var(--small-gap);
   color: var(--white);
   background-color: var(--dark-internago-blue);
   text-align: center;
 }
 
-.sidebar-about h3{
+.sidebar-about h3 {
   margin-bottom: var(--xs-gap);
   color: var(--white);
 }
 
-.sidebar-recent, .sidebar-categories{
+.sidebar-about p {
+  color: var(--white);
+}
+
+.sidebar-recent, .sidebar-categories {
   padding: var(--small-gap) var(--small-gap) var(--xs-gap);
 }
 
@@ -1816,3 +1828,139 @@ transition: background-color 0.4s ease;
     width: 100%;
   }
 }
+
+
+/*------------------------------------------------------ABOUT US PAGE------------------------------------------------------*/
+
+
+
+/*---------------------------------------ABOUT INTERNAGO COMPONENT---------------------------------------*/
+
+.internagoabout{
+line-height: 4px;
+display: inline-block;
+width: 40%;
+vertical-align: top;
+}
+
+.internagoaboutimg {
+  display: inline-block;
+width: 40%;
+margin-right: var(--big-gap);
+}
+
+.internagoaboutimg p {
+  line-height: 1.8;
+}
+
+.internagobelieve {
+line-height: 4px;
+display: inline-block;
+width: 40%;
+vertical-align: top;
+margin-right: var(--big-gap);
+margin-top: var(--medium-gap);
+}
+
+.internagobelieveimg {
+display: inline-block;
+width: 40%;
+margin-top: var(--medium-gap);
+}
+
+.internagobelieve p {
+  line-height: 1.8;
+
+}
+
+.internagobelieve p::first-letter {
+  font-size: var(--fontSize-2);
+  color: var(--dark-internago-blue);
+  font-weight: 600;
+}
+
+.internagoabout p::first-letter {
+  font-size: var(--fontSize-2);
+  color: var(--dark-internago-blue);
+  font-weight: 600;
+}
+
+
+
+
+/*---------------------------------------FOUNDERS COMPONENT---------------------------------------*/
+.founder-section {
+  margin-top: var(--big-gap);
+}
+
+.founder-section h2 {
+  text-align: center;
+  margin-bottom: var(--medium-gap);
+}
+
+.founder-cards-wrapper {
+  padding: 0 var(--big-gap) var(--big-gap);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: 22rem;
+  grid-gap: 6vw;
+}
+
+.founder-card {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 21px;
+  padding: var(--small-gap);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.founder-card .img-wrapper {
+  overflow: hidden;
+  height: 7rem;
+  width: 100%;
+  background-color: var(--light-internago-blue);
+  margin-bottom: var(--xs-gap);
+}
+
+.founder-card h3 {
+  color: var(--dark-grey);
+  margin-bottom: 0.6rem;
+}
+
+.founder-card a {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+.founder-card a:hover {
+  color: var(--light-internago-blue)
+}
+
+.founder-card .icon {
+  height: 25px;
+  width: 25px;
+}
+
+.founder-bottom-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.founder-bottom-card p {
+  display: inline-block;
+  font-size: var(--fontSize-2);
+  margin-right: 10px;
+}
+
+/*-------------------------FOUNDERS MOBILE-------------------------*/
+@media only screen and (max-width: 600px) {
+  .founder-card{
+    margin-bottom: var(--small-gap);
+  }
+
+  .founder-bottom-card p {
+    font-size: var(--fontSize-1);
+  }
+}
+

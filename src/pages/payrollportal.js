@@ -38,7 +38,7 @@ const PayrollPortal = ({ data, location }) => {
   
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title="Home" />
+        <SEO title="Payroll Portal" />
         <PayrollPortalHero/>
         <IntroSection introHeading={payrollHeading} introText1={payrollText1} introText2={payrollText2}/>
         <PayrollHRManagement/>

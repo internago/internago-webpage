@@ -12,7 +12,7 @@ const Blogcards = ({filteredPosts}) => {
           const image = post.frontmatter.featuredimage 
           let thisPostsTags = post.frontmatter.tags
 
-          if (thisPostsTags == null) {
+          if (thisPostsTags === null) {
             thisPostsTags = []
           }
 

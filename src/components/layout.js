@@ -80,37 +80,37 @@ function slideInMenu() {
       
       <nav className="main-nav">
         <a href="/"><img src={Logo} alt="logo of internago" className='internago-img'></img></a>
-            <menu className="hamburger-menu" onClick={toggleMenu}>
+            <ul className="hamburger-menu" onClick={toggleMenu}>
               <div className="line1"></div>
               <div className="line2"></div>
               <div className="line3"></div>
-            </menu>
-            <menu className="mobile-menu">
+            </ul>
+            <ul className="mobile-menu">
               <li><a href="/">Home</a></li>
               <li><a href="/payrollportal">Payroll Portal</a></li>
               <li><a href="/servicespage">Services</a></li>
               <li><a href="/blog?filter=all">Blog and News</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Book a demo</a></li>
-            </menu> 
+              <li><a href="/about">About us</a></li>
+              <li><a href="mailto:info@internago.com">Contact us</a></li>
+              <li><a href="mailto:info@internago.com">Book a demo</a></li>
+            </ul> 
 
-            <menu className="desktop-menu">
+            <ul className="desktop-menu">
               <li><a href="/">Home</a></li>
-              <span className="what-we-offer">
+              <ul className="what-we-offer">
                 <li className="what-we-offer-listitem">What we offer
                   <svg className="toggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.51465 8.4652L11.9996 16.9502L20.4846 8.4652L19.0706 7.0502L11.9996 14.1222L4.92865 7.0502L3.51465 8.4652Z" fill="#00446E"/></svg>
                 </li>
-                <menu className="what-we-offer-submenu">
+                <ul className="what-we-offer-submenu">
                   <li><a href="/payrollportal">Payroll Portal</a></li>
                   <li><a href="/servicespage">Services</a></li>
-                </menu>
-              </span>
+                </ul>
+              </ul>
               <li><a href="/blog?filter=all">Blog and News</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#" className="neutral-btn btn">Contact us</a></li>
-              <li><a href="#" className="cta-btn btn">Book a demo</a></li>
-            </menu> 
+              <li><a href="/about">About us</a></li>
+              <li><a href="mailto:info@internago.com" className="neutral-btn btn">Contact us</a></li>
+              <li><a href="mailto:info@internago.com" className="cta-btn btn">Book a demo</a></li>
+            </ul> 
       </nav>
 
 
