@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Payroll from "../images/graphics/payroll-img.png"
 import servicesimg from "../images/graphics/services-img.png"
 

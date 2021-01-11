@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+
 import globeicon from "../images/icons/globe.png"
 import cloudicon from "../images/icons/cloud.png"
 import safeicon from "../images/icons/safe.png"

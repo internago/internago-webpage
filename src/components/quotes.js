@@ -11,7 +11,7 @@ const Quotes = ({quotesArray}) => {
                 <p>{individualQuote.quote}</p>
                 <p className="author">{individualQuote.author}</p>
                 <p className="company">{individualQuote.company}</p>
-                <div className="quote-icon"><img src={quote}></img></div>
+                <div className="quote-icon"><img alt="icon of a quote-mark" src={quote}></img></div>
               </div>
             ))}
       </section>

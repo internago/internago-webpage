@@ -13,31 +13,31 @@ const PayrollHRManagement = ({}) => {
         <section className="payroll-management">
             <div className="payroll-management-cards-wrapper">
                     <div className="payroll-icon-card">
-                    <img src={mobileicon}></img>
+                    <img alt="icon showing a mobile" src={mobileicon}></img>
                         <p>Mobile device login</p>
                     </div>
                     <div className="payroll-icon-card">
-                        <img src={handicon}></img>
+                        <img alt="icon of hand pushing a button" src={handicon}></img>
                         <p>Simple to use</p>
                     </div>
                     <div className="payroll-icon-card">
-                        <img src={moneyicon}></img>
+                        <img alt="icon displaying a stack of money" src={moneyicon}></img>
                         <p>Expense management</p>
                     </div>
                     <div className="payroll-icon-card">
-                        <img src={clockicon}></img>
+                        <img alt="icon displaying a clock with a bell in the corner" src={clockicon}></img>
                         <p>Real time notification</p>
                     </div>
                     <div className="payroll-icon-card">
-                        <img src={speechbubblesicon}></img>
+                        <img alt="icon of two speechbubbles" src={speechbubblesicon}></img>
                         <p>Multi language</p>
                     </div>
                     <div className="payroll-icon-card">
-                        <img src={acceptdeclineicon}></img>
+                        <img alt="icon of two circles with a checkmark and a cross with arrows going around them" src={acceptdeclineicon}></img>
                         <p>Accept/decline workflow, configurable for enabling multiple approvers</p>
                     </div>
                     <div className="payroll-icon-card">
-                        <img src={calendericon}></img>
+                        <img alt="icon displaying a calender" src={calendericon}></img>
                         <p>Absence and time management </p>
                     </div>
              </div>

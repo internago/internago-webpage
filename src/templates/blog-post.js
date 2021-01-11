@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -41,7 +41,7 @@ const BlogPostTemplate = ({ data, location }) => {
               ))}
             </ul>
           </p>
-          <div className="img-wrapper"><img src={post.frontmatter.featuredimage} alt= "featured image thumbnail for post" itemProp="image"></img></div>
+          <div className="img-wrapper"><img src={post.frontmatter.featuredimage} alt= "featured thumbnail for post" itemProp="image"></img></div>
         
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}

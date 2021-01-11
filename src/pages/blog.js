@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -40,7 +40,7 @@ const BlogIndex = ({ data, location }) => {
 
 
   function filteringPostsToDisplay() {
-    if (query == "all"){
+    if (query === "all"){
       postsToDisplay = posts
     } else {
       let postsWithoutNull = posts.filter(post => post.frontmatter.tags !== null)

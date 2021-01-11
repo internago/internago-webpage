@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Climbing from "../images/graphics/climbing-img.png"
 import Complex from "../images/graphics/complex-img.png"
 
@@ -19,7 +18,7 @@ const Advisoryincorp = ({ }) => {
 </div>
 <div className="professionals">
  <div className="professionalsleft"> 
-    <img src={Climbing}></img>
+    <img alt="graphic illustration of a person climbing up a ladder exploring new grounds with a flag in his hand and three people below cheering for him" src={Climbing}></img>
  </div>
         <div className="professionalsright"> 
             <h2 className="professionalsheading">Experienced professional</h2> 

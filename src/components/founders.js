@@ -1,7 +1,5 @@
 import React from "react"
 
-import linkedin from "../images/icons/linkedin.png"
-import locationpin from "../images/icons/locationpin.png"
 
 const Founders = ({}) => {  
 

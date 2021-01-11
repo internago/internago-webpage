@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+
 import Kitabsawti from '../images/logos/kitab-sawti.png'
 import Benify from '../images/logos/benify.png'
 import Dedicare from '../images/logos/dedicare.png'

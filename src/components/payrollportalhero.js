@@ -11,7 +11,7 @@ const PayrollPortalHero = ({}) => {
                 Our international payroll software enables you to manage your payroll and HR in one place – online.</p>
             </div>
             <div className="what-we-offer-hero-graphic">
-                <img src={PayrollPortalImg} className="what-we-offer-hero-img"></img>
+                <img alt="graphic illustration of a person sitting in front of a screen with the Internago payroll portal on it" src={PayrollPortalImg} className="what-we-offer-hero-img"></img>
             </div>
       </section>
 

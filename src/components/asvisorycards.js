@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+
 import Handshake from "../images/icons/handshake.png"
 import Legal from "../images/icons/legal.png"
 import Diagram from "../images/icons/diagram.png"
@@ -8,7 +8,7 @@ const AdvisoryCards = ({}) => {
     return (
       <section className="advisory-cards-wrapper">
           <div className="advisory-card">
-              <div className="advisory-card-img-wrapper"><img src={Handshake}></img></div>
+              <div className="advisory-card-img-wrapper"><img alt="icon of two shaking hands" src={Handshake}></img></div>
               <div>
                 <h3>Business Advisory</h3>
                 <ul>
@@ -20,7 +20,7 @@ const AdvisoryCards = ({}) => {
               </div>
           </div>
           <div className="advisory-card">
-              <div className="advisory-card-img-wrapper"><img src={Legal}></img></div>
+              <div className="advisory-card-img-wrapper"><img alt="icon of a scale" src={Legal}></img></div>
               <div>
                 <h3>Legal Advisory</h3>
                 <ul>
@@ -34,7 +34,7 @@ const AdvisoryCards = ({}) => {
               </div>
           </div>
           <div className="advisory-card">
-              <div className="advisory-card-img-wrapper"><img src={Diagram}></img></div>
+              <div className="advisory-card-img-wrapper"><img alt="icon displaying a diagram" src={Diagram}></img></div>
               <div>
                 <h3>Analysis and assessments</h3>
                 <ul>

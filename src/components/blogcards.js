@@ -19,7 +19,7 @@ const Blogcards = ({filteredPosts}) => {
           return (
             <div className="blog-card" key={post.fields.slug}>
               <div>
-                <div className="img-wrapper"><img src={image} alt="featured image thumbnail for post" itemProp="image"></img></div>
+                <div className="img-wrapper"><img src={image} alt="featured thumbnail for post" itemProp="image"></img></div>
                 <h3 itemProp="headline"><Link to={post.fields.slug} itemProp="url">{title}</Link></h3>
                 <small>{post.frontmatter.date}  ||
                 <ul className="overview-taglist">

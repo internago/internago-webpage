@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import analyseimg from "../images/graphics/analyse-img.png"
 import digitalizeimg from "../images/graphics/digitalise-img.png"

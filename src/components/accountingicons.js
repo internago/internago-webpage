@@ -11,23 +11,23 @@ const AccountingIcons = ({}) => {
         <section className="accounting-icons">
             <div className="accounting-icons-wrapper">
                     <div className="accounting-icon-box">
-                    <img src={earth}></img>
+                    <img alt="icon of a globe" src={earth}></img>
                         <p>Local teams of accountants ensuring compliance to local regulation</p>
                     </div>
                     <div className="accounting-icon-box">
-                        <img src={dollarcalender}></img>
+                        <img alt="icon showing a dollarsign in the corner" src={dollarcalender}></img>
                         <p>Montly financial reporting in format according to company’s needs</p>
                     </div>
                     <div className="accounting-icon-box">
-                        <img src={protocol}></img>
+                        <img alt="icon with a protocol" src={protocol}></img>
                         <p>Technical adaptbility to specific reporting format</p>
                     </div>
                     <div className="accounting-icon-box">
-                        <img src={tax}></img>
+                        <img alt="icon showing two papers with VAT headline on them" src={tax}></img>
                         <p>Tax and VAT filing</p>
                     </div>
                     <div className="accounting-icon-box">
-                        <img src={accounting}></img>
+                        <img alt="icon showing two hands holding a circle with a calculator, a diagram and a scale in it" src={accounting}></img>
                         <p>Advisory of any accounting, legal or financial queries</p>
                     </div>
              </div>
