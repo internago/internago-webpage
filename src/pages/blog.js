@@ -15,7 +15,7 @@ const BlogIndex = ({ data, location }) => {
 
 
   //Variables for filtering
-  let params = new URLSearchParams(window.location.search.substring(1));
+  let params = new URLSearchParams(location.search.substring(1));
   let query = params.get("filter")
   let postsToDisplay = []
   let allTags = []
