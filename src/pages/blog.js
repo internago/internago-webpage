@@ -33,10 +33,10 @@ const BlogIndex = ({ data, location }) => {
 
 
   //Functions
-  function paramToUserInput(query) {
+  /*function paramToUserInput(query) {
     console.log(query)
     console.log(document.querySelector(`#${query}`))
-  }
+  }*/
 
 
   function filteringPostsToDisplay() {
@@ -107,7 +107,7 @@ const BlogIndex = ({ data, location }) => {
       <div className="form-wrapper">
         <form className="filter-form">
         <label for="categories" className="filter-label">Filter by: </label>
-          <select id="categories" name="categories" className="filter-input" onLoad={paramToUserInput(query)}>
+          <select id="categories" name="categories" className="filter-input">
             <option value="all" className="filter-option" id="all">All</option>
             {allTags.map((tag) => (
               <option value={tag.toLowerCase()} className="filter-option" id={tag.toLowerCase()}>{tag}</option>
