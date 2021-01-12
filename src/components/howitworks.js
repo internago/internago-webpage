@@ -12,7 +12,7 @@ const HowItWorks = () => {
                 <div className="graphic-img"><img src={analyseimg} alt="illustration of technical chaos" className="portal-img"></img></div>
                 <div className="txt-block">
                     <h3>Analyse</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p>Edited Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                 </div>
             </div>
             <div className="digitalize">
