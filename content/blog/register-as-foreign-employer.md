@@ -9,13 +9,13 @@ tags:
 ---
 <!--StartFragment-->
 
-#### Employ and run payroll internationally without setting up a foreign company
+# Employ and run payroll internationally without setting up a foreign company
 
 We often get the question from companies if they need to set up a local company to employ on international markets?
 
 In many cases it is actually not needed. After discussing with our customers, we often conclude that a smooth and lightweight solution for them is to register as a foreign employer and to run payroll locally instead of setting up a foreign company.  
 
-##### So, how do I proceed? 
+## So, how do I proceed? 
 
 Being a foreign employer means that the company employs their staff according to local labor laws and runs the local payroll while remaining fully compliant. Internago takes care of the whole process, from start to finish. The advantage with a foreign employer set-up is that it is less costly and easier from an administrative perspective. Often it can be quite costly and complicated in terms of administration to set up a new company just to employ one or two employees. 
 
@@ -23,7 +23,7 @@ We at Internago act as your company’s international HR department – will tak
 
 We provide a full payroll service including payroll calculations, payroll reports, and statutory declarations. Everything is handled by our local payroll experts.
 
-##### Payroll services
+## Payroll services
 
 By using our Internago [Payroll portal](https://www.internago.com/payroll-portal) our customers get full control of the payroll process and their international employees. We can also manage all the local payments for your company to make it even easier to operate on your international markets.
 

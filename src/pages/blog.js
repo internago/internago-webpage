@@ -3,8 +3,10 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import CTA from "../components/cta"
+import FilterForm from "../components/filterform"
 import Blogcards from "../components/blogcards"
+import CTA from "../components/cta"
+
 
 
 const BlogIndex = ({ data, location }) => {
@@ -32,13 +34,6 @@ const BlogIndex = ({ data, location }) => {
   captureAllTags()
 
 
-  //Functions
-  /*function paramToUserInput(query) {
-    console.log(query)
-    console.log(document.querySelector(`#${query}`))
-  }*/
-
-
   function filteringPostsToDisplay() {
     if (query === "all"){
       postsToDisplay = posts
@@ -48,12 +43,6 @@ const BlogIndex = ({ data, location }) => {
       let postsWithoutNull = posts.filter(post => post.frontmatter.tags !== null)
       postsToDisplay = postsWithoutNull.filter(post => post.frontmatter.tags.includes(query[0].toUpperCase() + query.substring(1)))
     }
-  }
-  
-
-  function applyFilter() {
-    let userInput = document.querySelector(".filter-input").value
-    document.location = `/blog?filter=${(userInput.toLowerCase())}`
   }
 
 
@@ -84,7 +73,6 @@ const BlogIndex = ({ data, location }) => {
   })
 
 
-
   //Print content
   if (posts.length === 0) {
     return (
@@ -103,30 +91,11 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Blog &amp; News"/>
-      
-      <div className="form-wrapper">
-        <form className="filter-form">
-        <label for="categories" className="filter-label">Filter by: </label>
-          <select id="categories" name="categories" className="filter-input">
-            <option value="all" className="filter-option" id="all">All</option>
-            {allTags.map((tag) => (
-              <option value={tag.toLowerCase()} className="filter-option" id={tag.toLowerCase()}>{tag}</option>
-            ))}
-          </select>
-          <button className="neutral-btn apply-filter" onClick={applyFilter} type="button">Filter</button>
-        </form>
-        <div className="empty-div-for-grid"></div>
-        <div className="all-posts-btn-wrapper">
-          <a href="allposts"><button className="view-all-btn">View list of posts</button></a>
-        </div>
-      </div>
-      
+      <FilterForm allTags={allTags}/>
       <Blogcards filteredPosts={filteredPosts}/>
-
       <div className="view-more-wrapper">
         <button className="cta-btn view-more-btn" onClick={viewMorePosts}>View more posts</button>
       </div>
-      
       <CTA ctaHeading={ctaHeading} ctaText={ctaText} ctaBtn={ctaBtn}/>
     </Layout>
   )

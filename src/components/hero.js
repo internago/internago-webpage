@@ -1,7 +1,7 @@
 import React from "react"
 import heroimg from "../images/graphics/hero-img.png"
 
-const Hero = ({}) => {  
+const Hero = () => {  
     return (
       <div className="hero">
           <div className="hero-left">

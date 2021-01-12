@@ -1,7 +1,7 @@
 import React from "react"
 import ServicesImg from "../images/graphics/servicespage-img.png"
 
-const ServicesHero = ({}) => {  
+const ServicesHero = () => {  
     return (
       <section className="what-we-offer-hero">
         <div className="what-we-offer-hero-text">   

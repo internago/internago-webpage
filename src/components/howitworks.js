@@ -4,7 +4,7 @@ import analyseimg from "../images/graphics/analyse-img.png"
 import digitalizeimg from "../images/graphics/digitalise-img.png"
 import optimizeimg from "../images/graphics/optimise-img.png"
 
-const HowItWorks = ({}) => {
+const HowItWorks = () => {
     return (
         <section className="how-it-works-section">
             <h2>How it works</h2>

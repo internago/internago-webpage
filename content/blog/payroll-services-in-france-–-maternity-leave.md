@@ -9,7 +9,7 @@ featuredimage: /images/payroll-maternity.png
 ---
 <!--StartFragment-->
 
-#### Maternity and paternity leave in France
+# Maternity and paternity leave in France
 
  
 

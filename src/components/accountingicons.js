@@ -6,7 +6,7 @@ import protocol from "../images/icons/protocol.png"
 import tax from "../images/icons/tax.png"
 import accounting from "../images/icons/accounting.png"
 
-const AccountingIcons = ({}) => {
+const AccountingIcons = () => {
     return (
         <section className="accounting-icons">
             <div className="accounting-icons-wrapper">

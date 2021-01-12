@@ -8,7 +8,7 @@ tags:
 ---
 <!--StartFragment-->
 
-#### Handle your international business via Internago!
+# Handle your international business via Internago!
 
 Administering an international business can be time-consuming, expensive and complex. With Internago, you can get rid of these burdens while still profit from an international presence.
 

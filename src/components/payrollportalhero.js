@@ -1,7 +1,7 @@
 import React from "react"
 import PayrollPortalImg from "../images/graphics/payroll-portal-img.png"
 
-const PayrollPortalHero = ({}) => {  
+const PayrollPortalHero = () => {  
     return (
       <section className="what-we-offer-hero">
         <div className="what-we-offer-hero-text">   

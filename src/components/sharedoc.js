@@ -2,7 +2,7 @@ import React from "react"
 
 import sharedoc from "../images/graphics/sharedoc-img.png"
 
-const ShareDoc = ({}) => {
+const ShareDoc = () => {
     return(
     <section className="share-doc">
             <div className="sharedoc-left">

@@ -8,7 +8,7 @@ import speechbubblesicon from "../images/icons/speechbubbles.png"
 import acceptdeclineicon from "../images/icons/acceptdecline.png"
 import calendericon from "../images/icons/calender.png"
 
-const PayrollHRManagement = ({}) => {
+const PayrollHRManagement = () => {
     return (
         <section className="payroll-management">
             <div className="payroll-management-cards-wrapper">

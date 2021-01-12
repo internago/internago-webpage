@@ -2,7 +2,7 @@ import React from "react"
 import Payroll from "../images/graphics/payroll-img.png"
 import servicesimg from "../images/graphics/services-img.png"
 
-const Services = ({ }) => {
+const Services = () => {
     return (
         <section className="services-homepage">
            <div className="services-up">

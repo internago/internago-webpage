@@ -8,7 +8,7 @@ import paperstackicon from "../images/icons/paperstack.png"
 import diagramicon from "../images/icons/diagram.png"
 
 
-const WhyInternago = ({}) => {
+const WhyInternago = () => {
     return (
         <section className="why-internago">
             <h2>Why Internago?</h2>

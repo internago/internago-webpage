@@ -2,13 +2,13 @@ module.exports = {
   siteMetadata: {
     title: `Internago - International Payroll, Local Experts`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Internago`,
+      summary: `Official website of Internago, offering international payroll services and portal.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `Internago offers a international payroll system, which allows you to easily administrate pay for international employees from one online interface. Our experienced team of consultants have worked in various industries and with different challenges, and can take care of the time consuming and complex administrative tasks before, during and after you enter a new market.`,
+    siteUrl: `https://internago.com`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `@Interna_GO`,
     },
   },
   plugins: [
@@ -60,11 +60,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Internago Official Website`,
+        short_name: `Internago`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#0066AA`,
         display: `minimal-ui`,
         icon: `content/assets/internago-icon.png`,
       },

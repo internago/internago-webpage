@@ -3,7 +3,7 @@ import Climbing from "../images/graphics/climbing-img.png"
 import Complex from "../images/graphics/complex-img.png"
 
 
-const Advisoryincorp = ({ }) => {
+const Advisoryincorp = () => {
     return (
         <section className="advisoryincorp">
  <div className="complex">

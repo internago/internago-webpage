@@ -1,7 +1,11 @@
 import React from "react"
 
+import vilhelm from "../images/graphics/vilhelm.png"
+import robert from "../images/graphics/robert.png"
+import kristofer from "../images/graphics/kristofer.png"
 
-const Founders = ({}) => {  
+
+const Founders = () => {  
 
     return (
       <section className="founder-section">
@@ -10,7 +14,7 @@ const Founders = ({}) => {
 
                 <div className="founder-card">
                     <div className="founder-top-card">
-                        <div className="img-wrapper"></div>
+                        <div className="img-wrapper"><img alt="graphic illustration of a portrait of Robert" src={robert}></img></div>
                         <h3>Robert Wentrup</h3>
                         <a href="mailto:robert.wentrup@internago.com">robert.wentrup@internago.com</a> 
                     </div>
@@ -31,7 +35,7 @@ const Founders = ({}) => {
 
                 <div className="founder-card">
                     <div className="founder-top-card">
-                        <div className="img-wrapper"></div>
+                        <div className="img-wrapper"><img alt="graphic illustration of a portrait of Vilhelm" src={vilhelm}></img></div>
                         <h3>Vilhelm Brag</h3>
                         <a href="mailto:vilhelm.brag@internago.com">vilhelm.brag@internago.com</a> 
                     </div>
@@ -52,7 +56,7 @@ const Founders = ({}) => {
 
                 <div className="founder-card">
                     <div className="founder-top-card">
-                        <div className="img-wrapper"></div>
+                        <div className="img-wrapper"><img alt="graphic illustration of a portrait of Kristofer" src={kristofer}></img></div>
                         <h3>Kristofer Svartling</h3>
                         <a href="mailto:kristofer.svartling@internago.com">kristofer.svartling@internago.com</a> 
                     </div>

@@ -9,7 +9,7 @@ import Sportamore from '../images/logos/sportamore.png'
 
 
 
-const Clients = ({ }) => {
+const Clients = () => {
     return (
         <div className="clients"> 
            <div className="clients-img"><img src={Kitabsawti} alt="Kitab Sawti logo"></img></div>

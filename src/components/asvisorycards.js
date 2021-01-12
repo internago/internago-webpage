@@ -4,7 +4,7 @@ import Handshake from "../images/icons/handshake.png"
 import Legal from "../images/icons/legal.png"
 import Diagram from "../images/icons/diagram.png"
 
-const AdvisoryCards = ({}) => {  
+const AdvisoryCards = () => {  
     return (
       <section className="advisory-cards-wrapper">
           <div className="advisory-card">
