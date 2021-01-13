@@ -19,7 +19,7 @@ const HowItWorks = () => {
                 <div className="graphic-img"><img src={digitalizeimg} alt="illustration of a keyboard and hands with different digitalised motives around it" className="portal-img"></img></div>
                 <div className="txt-block">
                     <h3>Digitalize</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p>This is edited. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                 </div>
             </div>
             <div className="optimize">
