@@ -21,7 +21,7 @@ const PayrollPortal = ({ data, location }) => {
     
     const quotesArray = [
       {
-        quote: "The ShareDoc module greatly facilitates the sharing and management of payroll and accounting related files. A perfect tool for payroll management and various declarations to individuals and companies",
+        quote: "The ShareDoc module greatly facilitates the sharing and management of payroll and accounting related files. A perfect tool for payroll management and various declarations to individuals and companies.",
         author: "",
         company: ""
       }

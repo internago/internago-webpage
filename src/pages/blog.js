@@ -13,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
   //General page settings
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-  let numberOfPosts = 6 
+  let numberOfPosts = 9
 
 
   //Variables for filtering

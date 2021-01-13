@@ -970,7 +970,7 @@ footer {
   margin-top: var(--xs-gap);
 }
 
-/*---------------------------------------ADVISORY CARDS COMPONENT MOBILE---------------------------------------*/
+/*-------------------------ADVISORY CARDS MOBILE-------------------------*/
 
 @media only screen and (max-width: 600px){
   .advisory-card li {
@@ -986,34 +986,31 @@ footer {
   }
 
   .advisory-card {
-    padding: var(--xs-gap);
+    margin-bottom: var(--small-gap);
 }
 }
 
 /*---------------------------------------ADVISORYINCORP COMPONENT---------------------------------------*/
  /*-------------------------ADVISORYINCORP DESKTOP-------------------------*/
 .advisoryincorp {
-  margin: 0 var(--big-gap) var(--big-gap) var(--big-gap);
+  margin: var(--big-gap);
 }
 
 .complex {
-  margin-top: var(--big-gap);
+  display: flex;
+  justify-content: space-between;
 }
 
 .complexleft {
-display: inline-block;
-width: 40%;
-vertical-align: top;
+  width: 40%;
 }
 
 .complexright {
-display: inline-block;
-width: 50%;
-margin-left: var(--medium-gap);
+  width: 50%;
 }
 
 .complexleft p{
-    margin-top: var(--small-gap);
+  margin-top: var(--small-gap);
 }
 
 .complexheading {
@@ -1021,21 +1018,17 @@ margin-left: var(--medium-gap);
 }
 
 .professionals {
-  margin-top: var(--small-gap);
+  margin-top: var(--medium-gap);
+  display: flex;
+  justify-content: space-between;
 }
 
 .professionalsright {
-display: inline-block;
-width: 45%;
-vertical-align: top;
-margin-top: var(--medium-gap);
+  width: 50%;
 }
 
 .professionalsleft {
-display: inline-block;
-width: 40%;
-margin-right: var(--medium-gap);
-margin-top: var(--medium-gap);
+  width: 40%;
 }
 
 .professionalsright p {
@@ -1073,11 +1066,14 @@ margin-top: var(--medium-gap);
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
+    margin-top: var(--xs-gap);
   }
  
   .professionalsright {
     width: 100%;
     display: block;
+    margin-top: var(--xs-gap);
+    margin-bottom: var(--small-gap);
   }
 
   .professionalsleft {
@@ -1158,7 +1154,7 @@ margin-top: var(--medium-gap);
 /*---------------------------------------QUOTE COMPONENT---------------------------------------*/
 .quotes {
   text-align: center;
-  margin-bottom: var(--big-gap);
+  margin: 0 var(--big-gap) var(--big-gap);
 }
 
 .quote-box {
@@ -1170,7 +1166,6 @@ margin-top: var(--medium-gap);
   border-radius: 40px;
   display: inline-block;
   position: relative;
-  margin-top: var(--big-gap);
 }
 
 .quote-box p {
@@ -1193,10 +1188,11 @@ margin-top: var(--medium-gap);
   font-weight: 600;
 }
 
-/*-------------------------QUOTES MOBILE-------------------------*/
-@media only screen and (max-width: 600px) {
-  .quote-box p {
-    font-size: var(--fontSize-1);
+/*-------------------------QUOTES TABLET-------------------------*/
+@media only screen and (max-width: 992px) {
+  .quote-box {
+    max-width: 80%;
+    margin: var(--small-gap) 0 0;
   }
 } 
 
@@ -1338,87 +1334,76 @@ font-size: var(--fontSize-1);
 }
 /*---------------------------------------SHAREDOC COMPONENT---------------------------------------*/
 .share-doc {
-  align-items: center;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: var(--big-gap);
+  padding-right: var(--big-gap);
+  margin-bottom: var(--big-gap);
 }
 
 .sharedoc-left {
-  align-items: center;
-  flex-direction: column;
-  margin-left: var(--big-gap);
-  justify-content: center;
-  margin-right: var(--small-gap); 
+  width: 40%;
 }
 
 .sharedoc-left p {
-  margin-top: var(--small-gap);
-  margin-bottom: var(--small-gap);
+  margin: var(--xs-gap) 0;
 }
 
-.sharedoc-left a {
-  margin-top: var(--small-gap);
+.share-doc ul {
+  list-style-type: none;
+  margin: var(--xs-gap) 0;
 }
 
-.sharedoc-left span {
-  font-weight: 600;
-  color: var(--dark-internago-blue);
+.share-doc li {
+  color: var(--dark-grey);
+  font-size: var(--fontSize-2);
+  line-height: 1.8;
+  letter-spacing: 0.004em;
 }
 
 .sharedoc-right {
-  justify-content: center; 
+  width: 50%;
 }
 
 .sharedoc-right img{
-  width: 80%;
+  width: 100%;
 }
 
 /*-------------------------SHAREDOC BELOW DESKTOP-------------------------*/
 @media only screen and (max-width: 1100px) {
 .share-doc {
-  flex-direction: column;
+  flex-direction: column-reverse;
   text-align: center;
-  gap: var(--medium-gap);
-  }
+}
 
 .sharedoc-left {
-  margin: auto;
-  width: 80%;
+  width: 100%;
 }
 
 .sharedoc-left p {
   margin-bottom: var(--medium-gap);
-}
-
-.sharedoc-right img {
-  width: 70%;
-  margin-bottom: var(--med)
-}
-}
-/*-------------------------SHAREDOC MOBILE-------------------------*/
-@media only screen and (max-width: 600px){
-.share-doc {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: var(--small-gap);
-}
-
-.sharedoc-left {
-  display: flex;
-  flex-direction: column;
-}
-
-.sharedoc-left p {
-  margin-bottom: var(--xs-gap);
-}
-
-.sharedoc-left a {
-  margin-top: var(--xs-gap);
 }
 
 .sharedoc-right {
+  width: 100%;
   margin-bottom: var(--medium-gap);
 }
+}
+
+/*-------------------------SHAREDOC MOBILE-------------------------*/
+@media only screen and (max-width: 600px){
+  .sharedoc-left p {
+    margin-bottom: var(--small-gap);
+  }
+
+  .share-doc li {
+    font-size: var(--fontSize-1);
+  }
+
+  .sharedoc-right {
+    margin-bottom: var(--small-gap);
+  }
 }
 
 /*------------------------------------------------------BLOG OVERVIEW------------------------------------------------------*/
@@ -1469,6 +1454,7 @@ font-size: var(--fontSize-1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 0;
 }
 
 .blog-card h3 {
@@ -1558,6 +1544,13 @@ font-size: var(--fontSize-1);
 
 .view-all-btn:active {
   top: 2px;
+}
+
+/*-------------------------BLOG OVERVIEW MOBILE-------------------------*/
+@media only screen and (max-width: 600px){
+  .blog-card {
+    margin-bottom: var(--small-gap);
+  }
 }
 
 /*------------------------------------------------------ALL BLOG POSTS------------------------------------------------------*/
@@ -1830,40 +1823,30 @@ font-size: var(--fontSize-1);
 
 .about {
   margin-top: var(--medium-gap);
+  display: flex;
+  justify-content: space-between;
 }
 
 .internagoabout{
-  display: inline-block;
-  width: 40%;
-  vertical-align: top;
+  width: 45%;
 }
 
 .internagoaboutimg {
-  display: inline-block;
-  width: 40%;
-  margin-right: var(--big-gap);
-}
-
-.internagoabout .internagobelieve p {
-  line-height: 1.8;
+  width: 45%;
 }
 
 .believe {
-  margin-top: var(--small-gap);
+  margin-top: var(--medium-gap);
+  display: flex;
+  justify-content: space-between;
 }
 
 .internagobelieve {
-  display: inline-block;
-  width: 40%;
-  vertical-align: top;
-  margin-right: var(--big-gap);
-  margin-top: var(--medium-gap);
+  width: 45%;
 }
 
 .internagobelieveimg {
-  display: inline-block;
-  width: 40%;
-  margin-top: var(--medium-gap);
+  width: 45%;
 }
 
 .aboutfirstword {
@@ -1875,7 +1858,6 @@ font-size: var(--fontSize-1);
 
 @media only screen and (max-width: 1100px){
   .about {
-    display: flex;
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
@@ -1896,13 +1878,13 @@ font-size: var(--fontSize-1);
 
   .believe {
     align-items: center;
-    display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: var(--small-gap);
   }
  
   .internagobelieveimg {
-     width: 80%;
+    width: 80%;
     display: block;
     margin-right: 0;
   }
@@ -2000,6 +1982,10 @@ font-size: var(--fontSize-1);
 
 /*-------------------------FOUNDERS MOBILE-------------------------*/
 @media only screen and (max-width: 600px) {
+  .founder-section h2 {
+    margin-bottom: var(--small-gap);
+  }
+
   .founder-card{
     margin-bottom: var(--small-gap);
   }
