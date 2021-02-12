@@ -6,7 +6,7 @@ Brief 6 - Hyper Island - If this, than that module.
 
 [Matilda Björk](https://github.com/MatildaBjorken)
 
-[Aleksandra Rzepecka](https://github.com/AcidDeleria)
+[Aleksandra Rzepecka](https://github.com/AcidDeliria)
 
 [Elsa Bynke](https://github.com/Elsmer)
 
